@@ -1,0 +1,59 @@
+.sidebar {
+    background-color: white;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 72px;
+    top: 55px;
+    z-index: 200;
+    padding-top: 5px;
+}
+
+.sidebar-link {
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.sidebar-link:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.sidebar-link img { /* al poner un espacio a un selector css, indicamos que estamos apuntando a ese componente dentro del div con la clase indicada */
+    height: 24px;
+    margin-bottom: 6px;
+}
+
+.sidebar-link div {
+    font-size: 10px;
+}
+
+@media (min-width:1200px){
+    .sidebar {
+        width: 170px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar-link {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+        align-items: center;
+    }
+
+    .sidebar-link div {
+        font-size: 13px;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    .sidebar-link img {
+        justify-content: center;
+        align-items: center;
+        height: 24px;
+        margin-left: 11px;
+    }
+}
